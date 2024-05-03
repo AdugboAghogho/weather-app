@@ -35,6 +35,7 @@ const Show = () => {
 
   return (
     <>
+    <div className="clock-div">
       <div className="clock">
         <div
           className="hour"
@@ -43,11 +44,14 @@ const Show = () => {
         <div className="min" style={{ transform: `rotateZ(${getRotationAngle(currentTime.getMinutes())}deg)` }} />
         <div className="sec" style={{ transform: `rotateZ(${getRotationAngle(currentTime.getSeconds())}deg)` }} />
       </div>
+
       <div className="switch-cont">
         <button className="switch-btn" onClick={switchTheme}>
           {currentTime.getHours() >= 18 ? 'Dark' : 'Light'}
         </button>
       </div>
+
+    </div>
     </>
   );
 };
